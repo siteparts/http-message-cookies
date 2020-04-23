@@ -1,0 +1,30 @@
+{
+	"name": "siteparts/http-message-cookies",
+	"description": "Cookies for PSR-7",
+	"license": "BSD-3-Clause",
+	"keywords": [
+		"cookies",
+		"http-message",
+		"psr-7"
+	],
+	"homepage": "https://github.com/siteparts/http-message-cookies",
+	"support": {
+		"issues": "https://github.com/siteparts/http-message-cookies/issues",
+		"source": "https://github.com/siteparts/http-message-cookies"
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"autoload": {
+		"psr-4": {
+			"SiteParts\\Cookies\\HttpMessage\\": "src/"
+		}
+	},
+	"require": {
+		"php": "^7.1",
+		"psr/http-message": "^1.0"
+	},
+	"suggest": {
+		"psr/container": "^1.0 to use the factory"
+	}
+}
