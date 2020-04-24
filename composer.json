@@ -15,6 +15,11 @@
 	"config": {
 		"sort-packages": true
 	},
+	"extra": {
+		"laminas": {
+			"config-provider": "SiteParts\\Cookies\\HttpMessage\\ConfigProvider"
+		}
+	},
 	"autoload": {
 		"psr-4": {
 			"SiteParts\\Cookies\\HttpMessage\\": "src/"

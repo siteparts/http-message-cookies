@@ -23,8 +23,8 @@ class ResponseCookieTemplate
 			$cookie = $cookie->withExpires($config["expires"]);
 		}
 
-		if (isset($config["maxAge"])) {
-			$cookie = $cookie->withMaxAge($config["maxAge"]);
+		if (isset($config["max_age"])) {
+			$cookie = $cookie->withMaxAge($config["max_age"]);
 		}
 
 		if (isset($config["domain"])) {
@@ -41,14 +41,14 @@ class ResponseCookieTemplate
 				: $cookie->withoutSecure();
 		}
 
-		if (isset($config["httpOnly"])) {
-			$cookie = $config["httpOnly"]
+		if (isset($config["http_only"])) {
+			$cookie = $config["http_only"]
 				? $cookie->withHttpOnly()
 				: $cookie->withoutHttpOnly();
 		}
 
-		if (isset($config["sameSite"])) {
-			$cookie = $cookie->withSameSite($config["sameSite"]);
+		if (isset($config["same_site"])) {
+			$cookie = $cookie->withSameSite($config["same_site"]);
 		}
 
 		return $cookie;
