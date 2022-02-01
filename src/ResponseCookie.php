@@ -204,10 +204,10 @@ class ResponseCookie
 		return $new;
 	}
 
-	public function withSecure() : self
+	public function withSecure(bool $secure = true) : self
 	{
 		$new = clone $this;
-		$new->secure = true;
+		$new->secure = $secure;
 		return $new;
 	}
 
@@ -218,10 +218,10 @@ class ResponseCookie
 		return $new;
 	}
 
-	public function withHttpOnly() : self
+	public function withHttpOnly(bool $httpOnly = true) : self
 	{
 		$new = clone $this;
-		$new->httpOnly = true;
+		$new->httpOnly = $httpOnly;
 		return $new;
 	}
 
