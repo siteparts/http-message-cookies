@@ -6,9 +6,30 @@ namespace SiteParts\Cookies\HttpMessage;
 
 class ResponseCookieTemplate
 {
-	/** @var array */
+	/**
+	 * @var array{
+	 *     expires?: \DateTime,
+	 *     max_age?: int,
+	 *     domain?: string,
+	 *     path?: string,
+	 *     secure?: bool,
+	 *     http_only?: bool,
+	 *     same_site?: string,
+	 * }
+	 */
 	private $config;
 
+	/**
+	 * @param array{
+	 *     expires?: \DateTime,
+	 *     max_age?: int,
+	 *     domain?: string,
+	 *     path?: string,
+	 *     secure?: bool,
+	 *     http_only?: bool,
+	 *     same_site?: string,
+	 * } $config
+	 */
 	public function __construct(array $config)
 	{
 		$this->config = $config;

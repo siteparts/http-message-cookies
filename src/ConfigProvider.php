@@ -6,6 +6,13 @@ namespace SiteParts\Cookies\HttpMessage;
 
 class ConfigProvider
 {
+	/**
+	 * @return array{
+	 *     dependencies: array{
+	 *         factories: array<string, string>,
+	 *     },
+	 * }
+	 */
 	public function __invoke() : array
 	{
 		return [
@@ -13,6 +20,11 @@ class ConfigProvider
 		];
 	}
 
+	/**
+	 * @return array{
+	 *     factories: array<string, string>,
+	 * }
+	 */
 	public function getDependencies() : array
 	{
 		return [
